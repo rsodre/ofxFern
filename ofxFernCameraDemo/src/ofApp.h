@@ -5,7 +5,7 @@
 #include "ofxOpenCv.h"
 #include "ofxFern.h"
 
-class testApp : public ofBaseApp{
+class ofApp : public ofBaseApp{
 
 	public:
 

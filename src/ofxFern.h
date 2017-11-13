@@ -66,6 +66,8 @@ class ofxFern{
 		/// show keypoints in the tracker image?
 		void showKeypoints(bool show)	{show_keypoints = show;}
 		bool getShowKeypoints()			{return show_keypoints;}
+	
+		ofxCvGrayscaleImage& GetImage() const	{ return const_cast<ofxCvGrayscaleImage&>(img); }
 		
 	protected:
 				
