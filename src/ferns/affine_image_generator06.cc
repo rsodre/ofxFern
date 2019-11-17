@@ -285,8 +285,10 @@ void affine_image_generator06::generate_affine_image(void)
 
 
   if (noise_level > 0 && add_noise)
-    if (use_random_background) add_white_noise(generated_image);
-    else add_white_noise(generated_image, 128);
+  {
+	  if (use_random_background) add_white_noise(generated_image);
+	  else add_white_noise(generated_image, 128);
+  }
 
   if (save_images) {
     static int n = 0;

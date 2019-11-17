@@ -33,7 +33,11 @@ ofxFern::~ofxFern(){
 }
 
 //------------------------------------------------------------------------
-void ofxFern::setup(string marker, int width, int height){
+void ofxFern::setup(string marker, int width, int height, 
+	int maximum_number_of_points_on_model,
+	int number_of_generated_images_to_find_stable_points,
+	int number_of_samples_for_refinement
+	){
 	
 	img.allocate(width, height); 
 	marker = ofToDataPath(marker);
@@ -44,7 +48,8 @@ void ofxFern::setup(string marker, int width, int height){
 
 	affine_transformation_range range;
 	detector = planar_pattern_detector_builder::build_with_cache(model_image.c_str(),
-					&range, 400, 5000, 0.0, 32, 7, 4,30, 12, 10000, 200);
+		&range, maximum_number_of_points_on_model, number_of_generated_images_to_find_stable_points,
+		0.0, 32, 7, 4, 30, 12, number_of_samples_for_refinement, 200);
 
   if(!detector) {
     ofLog(OF_LOG_ERROR, "ofxFern: Unable to build detector");

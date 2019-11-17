@@ -44,7 +44,11 @@ class ofxFern{
 		~ofxFern();
 
 		/// set the marker image file and incoming image size
-		void setup(string marker, int width, int height);
+		void setup(string marker, int width, int height,
+			int maximum_number_of_points_on_model=400,
+			int number_of_generated_images_to_find_stable_points=5000,
+			int number_of_samples_for_refinement=10000
+			);
 		
 		/// search for marker in an incoming image
 		/// dimensions should match size in setup()
