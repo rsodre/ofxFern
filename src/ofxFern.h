@@ -73,6 +73,9 @@ class ofxFern{
 	
 		ofxCvGrayscaleImage& GetImage() const	{ return const_cast<ofxCvGrayscaleImage&>(img); }
 		
+		planar_pattern_detector* Detector() { return detector; } 
+		template_matching_based_tracker* Tracker() { return tracker; }
+
 	protected:
 				
 		void draw_quadrangle(IplImage * frame, int u0, int v0, int u1, int v1, int u2, int v2, int u3, int v3, CvScalar color, int thickness = 1);
