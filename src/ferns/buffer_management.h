@@ -44,7 +44,7 @@ using namespace std;
   bool load_managed_buffer_in_pakfile(ifstream & f, void * buffer, int & size, type);
 */
 
-bool manage_image(IplImage ** image, int width, int height, long depth, int nChannels);
+bool manage_image(IplImage ** image, int width, int height, unsigned long depth, int nChannels);
 bool load_managed_image(char * filename, IplImage ** image, int code);
 void free_managed_image(IplImage ** image);
 void release_managed_image(IplImage ** image);

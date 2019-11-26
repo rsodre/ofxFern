@@ -59,7 +59,7 @@ void aligned_and_managed_delete(void * aligned_ptr)
   }
 }
 
-bool manage_image(IplImage ** image, int width, int height, long depth, int nChannels)
+bool manage_image(IplImage ** image, int width, int height, unsigned long depth, int nChannels)
 {
   bool just_created = false;
 
